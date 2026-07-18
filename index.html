@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الأستاذ سعد شاهين | بطاقة تعريفية</title>
+  <meta name="description" content="الأستاذ سعد شاهين - مدرس التاريخ والجغرافيا.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Reem+Kufi:wght@400;500;600;700&family=Cairo:wght@300;400;600;700;800&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #0f0e0c;
+      font-family: 'Cairo', 'Tajawal', sans-serif;
+      padding: 20px;
+      background-image: 
+        radial-gradient(circle at 20% 30%, rgba(184,148,60,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(184,148,60,0.06) 0%, transparent 50%),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" opacity="0.12"><path d="M0 0 L1200 0 L1200 800 L0 800Z" fill="%23b8943c"/><path d="M200 100 L350 80 L450 150 L300 200 L180 160Z" fill="%23b8943c" opacity="0.3"/><circle cx="900" cy="200" r="120" fill="none" stroke="%23b8943c" stroke-width="2"/><circle cx="900" cy="200" r="150" fill="none" stroke="%23b8943c" stroke-width="1"/><path d="M100 500 L300 420 L450 480 L320 540 L120 510Z" fill="%23b8943c" opacity="0.2"/><path d="M800 600 L1000 550 L1100 650 L900 700 L750 640Z" fill="%23b8943c" opacity="0.2"/><line x1="0" y1="300" x2="1200" y2="300" stroke="%23b8943c" stroke-width="0.8" opacity="0.3"/><line x1="0" y1="500" x2="1200" y2="500" stroke="%23b8943c" stroke-width="0.8" opacity="0.3"/><text x="50" y="60" font-size="22" fill="%23b8943c" opacity="0.2">خطوط طول</text><text x="1050" y="750" font-size="22" fill="%23b8943c" opacity="0.2">وعرض</text></svg>') center/cover no-repeat;
+      background-blend-mode: overlay;
+      position: relative;
+    }
+    body::before {
+      content: "\f129";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: fixed;
+      top: 10%;
+      left: 5%;
+      font-size: 18rem;
+      color: rgba(184,148,60,0.04);
+      transform: rotate(-10deg);
+      pointer-events: none;
+      z-index: 0;
+    }
+    body::after {
+      content: "\f0ac";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: fixed;
+      bottom: 5%;
+      right: 3%;
+      font-size: 12rem;
+      color: rgba(184,148,60,0.04);
+      transform: rotate(15deg);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .profile-card {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 440px;
+      background: rgba(244, 239, 230, 0.88);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-radius: 60px;
+      padding: 38px 30px 32px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(184,148,60,0.1);
+      text-align: center;
+      border: 1px solid rgba(184,148,60,0.12);
+      animation: fadeUp 0.9s ease;
+    }
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .image-frame {
+      width: 148px;
+      height: 148px;
+      margin: 0 auto 16px;
+      position: relative;
+      border-radius: 50%;
+      padding: 6px;
+      background: linear-gradient(135deg, #b8943c, #8a6f2d, #b8943c);
+      box-shadow: 0 12px 35px rgba(184,148,60,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .image-frame::before {
+      content: "";
+      position: absolute;
+      inset: -8px;
+      border-radius: 50%;
+      border: 2px dashed rgba(184,148,60,0.2);
+      animation: spinSlow 30s linear infinite;
+    }
+    @keyframes spinSlow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      background: #d9cdb0;
+      border: 4px solid #f4efe6;
+      display: block;
+    }
+
+    .frame-icons {
+      position: absolute;
+      top: -12px; right: -12px; bottom: -12px; left: -12px;
+      pointer-events: none;
+    }
+    .frame-icons i {
+      position: absolute;
+      font-size: 1.2rem;
+      color: #b8943c;
+      background: rgba(244,239,230,0.85);
+      backdrop-filter: blur(4px);
+      padding: 5px;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      border: 1px solid rgba(184,148,60,0.12);
+    }
+    .frame-icons .fi1 { top: -4px; right: 12px; }
+    .frame-icons .fi2 { bottom: -4px; left: 12px; }
+    .frame-icons .fi3 { top: 30px; left: -14px; }
+    .frame-icons .fi4 { bottom: 30px; right: -14px; }
+    .frame-icons .fi5 { top: -6px; left: 8px; font-size: 1rem; }
+    .frame-icons .fi6 { bottom: -6px; right: 8px; font-size: 1rem; }
+
+    /* ===== VISUAL HIERARCHY ===== */
+    .card-name {
+      font-family: 'Aref Ruqaa', 'Reem Kufi', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1a1613;
+      letter-spacing: 1.5px;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+    .card-sub {
+      font-family: 'Reem Kufi', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #5a3f2b;
+      letter-spacing: 0.3px;
+      margin-bottom: 10px;
+    }
+    .card-desc {
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: #6a5a4a;
+      background: rgba(184,148,60,0.05);
+      display: inline-block;
+      padding: 3px 20px;
+      border-radius: 40px;
+      border: 1px solid rgba(184,148,60,0.06);
+      margin-bottom: 18px;
+      letter-spacing: 0.2px;
+    }
+    .card-quote {
+      font-family: 'Aref Ruqaa', serif;
+      font-size: 1.45rem;
+      color: #b8943c;
+      padding: 8px 18px;
+      background: rgba(15,14,12,0.02);
+      border-radius: 60px;
+      display: inline-block;
+      border: 1px solid rgba(184,148,60,0.06);
+      margin: 0 0 20px;
+      line-height: 1.4;
+    }
+
+    /* ===== الأزرار الثلاثة جنب بعض ===== */
+    .card-btns {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: nowrap;
+      margin-top: 2px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      cursor: pointer;
+      font-family: 'Cairo', sans-serif;
+      text-decoration: none;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+    }
+    .btn-call {
+      background: #b8943c;
+      color: #fff;
+      box-shadow: 0 6px 18px rgba(184,148,60,0.25);
+    }
+    .btn-call:hover {
+      background: #8a6f2d;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(184,148,60,0.4);
+    }
+    .btn-whatsapp {
+      background: transparent;
+      border-color: #b8943c;
+      color: #b8943c;
+    }
+    .btn-whatsapp:hover {
+      background: #b8943c;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(184,148,60,0.3);
+    }
+    .btn-facebook {
+      background: transparent;
+      border-color: #b8943c;
+      color: #b8943c;
+    }
+    .btn-facebook:hover {
+      background: #1877f2;
+      border-color: #1877f2;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(24,119,242,0.3);
+    }
+    .btn i {
+      font-size: 1rem;
+    }
+
+    /* ===== الفوتر ===== */
+    .footer {
+      position: relative;
+      z-index: 2;
+      margin-top: 28px;
+      padding: 12px 20px;
+      text-align: center;
+      color: rgba(255,248,235,0.4);
+      font-size: 0.8rem;
+      background: rgba(15,14,12,0.3);
+      backdrop-filter: blur(6px);
+      border-radius: 60px;
+      border: 1px solid rgba(184,148,60,0.04);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px 16px;
+      max-width: 400px;
+      width: 100%;
+    }
+    .footer .sep {
+      opacity: 0.2;
+    }
+    .footer a {
+      color: rgba(255,248,235,0.5);
+      text-decoration: none;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .footer a:hover {
+      color: #d4b06a;
+    }
+    .footer .whatsapp-icon {
+      font-size: 1.2rem;
+      color: #25d366;
+    }
+    .footer .whatsapp-icon:hover {
+      color: #128c7e;
+      transform: scale(1.1);
+    }
+
+    /* ===== استجابة ===== */
+    @media (max-width: 500px) {
+      .profile-card {
+        padding: 26px 16px 22px;
+        border-radius: 40px;
+      }
+      .image-frame {
+        width: 120px;
+        height: 120px;
+      }
+      .card-name {
+        font-size: 2.4rem;
+        margin-bottom: 8px;
+      }
+      .card-sub {
+        font-size: 1.15rem;
+        margin-bottom: 8px;
+      }
+      .card-desc {
+        font-size: 0.85rem;
+        margin-bottom: 14px;
+      }
+      .card-quote {
+        font-size: 1.15rem;
+        padding: 6px 12px;
+        margin-bottom: 16px;
+      }
+      .btn {
+        padding: 8px 14px;
+        font-size: 0.75rem;
+        gap: 4px;
+      }
+      .btn i {
+        font-size: 0.85rem;
+      }
+      .card-btns {
+        gap: 8px;
+      }
+      .footer {
+        font-size: 0.7rem;
+        padding: 10px 14px;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .footer .sep {
+        display: none;
+      }
+      .frame-icons i {
+        font-size: 1rem !important;
+      }
+    }
+    @media (max-width: 380px) {
+      .card-name { font-size: 2rem; }
+      .image-frame { width: 100px; height: 100px; }
+      .card-quote { font-size: 1rem; }
+      .card-sub { font-size: 1rem; }
+      .btn {
+        padding: 6px 10px;
+        font-size: 0.65rem;
+      }
+      .btn i {
+        font-size: 0.7rem;
+      }
+      .card-btns {
+        gap: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile-card">
+    <div class="image-frame">
+      <img src="profile.jpg" alt="الأستاذ سعد شاهين">
+      <div class="frame-icons">
+        <i class="fas fa-globe-asia fi1"></i>
+        <i class="fas fa-compass fi2"></i>
+        <i class="fas fa-scroll fi3"></i>
+        <i class="fas fa-book-open fi4"></i>
+        <i class="fas fa-landmark fi5"></i>
+        <i class="fas fa-mountain fi6"></i>
+      </div>
+    </div>
+
+    <div class="card-name">الأستاذ سعد شاهين</div>
+    <div class="card-sub">مدرس التاريخ والجغرافيا</div>
+    <div class="card-desc">للمرحلتين الابتدائية والإعدادية</div>
+    <div class="card-quote">"كن عالي الهمة ولا ترضَ بغير القمة"</div>
+
+    <div class="card-btns">
+      <a href="tel:01118741651" class="btn btn-call"><i class="fas fa-phone-alt"></i> اتصال</a>
+      <a href="https://wa.me/201010684676" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب</a>
+      <a href="https://www.facebook.com/share/1Go87LLSL6/" target="_blank" class="btn btn-facebook"><i class="fab fa-facebook-f"></i> فيسبوك</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span>جميع الحقوق محفوظة © المصمم أبو زيد</span>
+    <span class="sep">|</span>
+    <a href="https://wa.me/201031423492" target="_blank" class="whatsapp-icon">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </footer>
+
+</body>
+</html>
